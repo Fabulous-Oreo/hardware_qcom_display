@@ -5,9 +5,11 @@ include $(CLEAR_VARS)
 # b/24171136 many files not compiling with clang/llvm yet
 LOCAL_CLANG := false
 
+LOCAL_USE_VNDK                := true
 LOCAL_MODULE                  := libqservice
 LOCAL_MODULE_TAGS             := optional
 LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes)
+LOCAL_HEADER_LIBRARIES        := libcutils_headers
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libbinder
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdqservice\"
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)

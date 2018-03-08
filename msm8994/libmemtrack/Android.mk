@@ -22,7 +22,8 @@ LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_PROPRIETARY_MODULE := true
 LOCAL_C_INCLUDES += hardware/libhardware/include
 LOCAL_CFAGS := -Wconversion -Wall -Werror
-LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_HEADER_LIBRARIES := libsystem_headers
+LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_SRC_FILES := memtrack_msm.c kgsl.c
 LOCAL_MODULE := memtrack.$(TARGET_BOARD_PLATFORM)
 include $(BUILD_SHARED_LIBRARY)

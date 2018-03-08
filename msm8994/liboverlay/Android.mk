@@ -5,6 +5,7 @@ include $(CLEAR_VARS)
 # b/24171136 many files not compiling with clang/llvm yet
 LOCAL_CLANG := false
 
+LOCAL_PROPRIETARY_MODULE      := true
 LOCAL_MODULE                  := liboverlay
 LOCAL_MODULE_TAGS             := optional
 LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes)
